@@ -2,25 +2,27 @@ import React, { Component } from "react";
 import Navbar from "./component/navbar";
 import Footer from "./component/footer";
 import DescriptionText from "./component/descriptionText";
-import ProductChart from "./component/productCart";
-import BillingAdress from "./component/billingAdress";
-import logo from "./logo.svg";
 import "./App.css";
+import Items from "./component/items";
 
 class App extends Component {
   render() {
     return (
       <div>
         <Navbar />
-        <main className="container">
+        <main className="container bg-white">
           <DescriptionText />
-          <ProductChart />
-          <BillingAdress />
-          <Footer />
+          <Items />
         </main>
+        <Footer />
       </div>
     );
   }
 }
+
+/*<div className="row">
+            <ProductChart />
+            <BillingAdress />
+          </div> */
 
 export default App;

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import logo from "../logo.png";
 
 const DescriptionText = () => {
@@ -7,7 +7,7 @@ const DescriptionText = () => {
       <img
         src={logo}
         alt=""
-        className="d-block mx-auto mb-4 w-5 h-5"
+        className="d-block mx-auto mb-4"
         style={{ width: "72px", height: "72px" }}
       />
       <h2>Checkout from</h2>
