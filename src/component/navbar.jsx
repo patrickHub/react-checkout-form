@@ -15,24 +15,29 @@ class Navbar extends Component {
           </span>
         </nav>
         <ul class="nav justify-content-center border bottom shadow">
-          <li class="nav-item">
+          <li class="nav-item mx-5">
             <a class="nav-link active text-bold text-dark" href="#">
-              SHOP ALL
+              HOME
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-5">
             <a class="nav-link active text-bold text-dark" href="#">
-              SPRING
+              MEM
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-5">
             <a class="nav-link active text-bold text-dark" href="#">
-              P-WING
+              WOMEN
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-5">
             <a class="nav-link active text-bold text-dark" href="#">
-              GREAT OUTDOORS
+              KIDS
+            </a>
+          </li>
+          <li class="nav-item mx-5">
+            <a class="nav-link active text-bold text-dark" href="#">
+              BABY
             </a>
           </li>
         </ul>

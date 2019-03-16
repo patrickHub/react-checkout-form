@@ -13,13 +13,15 @@ class ItemColumn extends Component {
             this.props.item.imagePath
           }
           alt=""
-          className="img-fluid d-block mx-auto mb-2"
+          className="img-fluid d-block mx-auto mb-2 height-auto"
         />
-        <p className="pl-2 my-0">
-          <strong>CHF {this.props.item.price}.00</strong>
-        </p>
-        <p className="pl-2 my-0">{this.props.item.name}</p>
-        <p className="pl-2 my-0">{this.props.item.brand}</p>
+        <div className="container-fluid">
+          <p className="pl-2 my-0">
+            <strong>CHF {this.props.item.price}.00</strong>
+          </p>
+          <p className="pl-2 my-0">{this.props.item.name}</p>
+          <p className="pl-2 my-0">{this.props.item.brand}</p>
+        </div>
       </div>
     );
   }

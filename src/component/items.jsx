@@ -21,7 +21,7 @@ class Items extends Component {
       newArray[k] = lineArray;
       k++;
     }
-    // create a new State object without mutating th original State object
+    // create a new State object without mutating the original State object
     const newState = Object.assign({}, this.state, {
       items: newArray,
       isLoading: false
@@ -34,11 +34,8 @@ class Items extends Component {
     axios
       .get("http://localhost:8082/api/products")
       .then(response => {
-        console.log("Response API: ", response);
-
+        console.log(response.data);
         this.organiseItems(response.data);
-
-        console.log("State: ", this.state.items);
       })
       .catch(error => {
         console.log(error);
@@ -47,13 +44,25 @@ class Items extends Component {
 
   render() {
     return (
-      <div>
-        {!this.state.isLoading ? (
-          this.state.items.map(itemArray => <ItemLine itemLine={itemArray} />)
-        ) : (
-          <p className="lead">Loading...</p>
-        )}
-      </div>
+      <main className="container-fluid bg-white">
+        <div>
+          {!this.state.isLoading ? (
+            this.state.items.map(array => {
+              return (
+                <ItemLine
+                  itemLine={array.filter(
+                    item =>
+                      this.props.match.url === "/" ||
+                      "/" + item.category === this.props.match.url
+                  )}
+                />
+              );
+            })
+          ) : (
+            <p className="lead">Loading...</p>
+          )}
+        </div>
+      </main>
     );
   }
 }

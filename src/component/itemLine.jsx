@@ -7,7 +7,7 @@ class ItemLine extends Component {
   };
   render() {
     return (
-      <div className="row">
+      <div className="row mb-5">
         {this.state.itemLine.map(item => (
           <ItemColumn item={item} />
         ))}
